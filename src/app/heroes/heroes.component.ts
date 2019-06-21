@@ -8,14 +8,13 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
+  heroes: Hero[];
 
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
     this.getHeroes();
   }
-
-  heroes: Hero[];
 
   getHeroes(): void {
     this.heroService.getHeroes()
